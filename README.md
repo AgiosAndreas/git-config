@@ -16,7 +16,15 @@
 
 
 ## Перед запуском
-Перед запуском скрипта необходимо задать имя и адрес почты в настройках git
+Создаем симлинк для SublimeText 2
+
+    ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+
+Задаем имя и адрес почты в настройках git
 
     git config --global user.name "Andrej Gaevskij"
     git config --global user.email "andrej.gaevskij@gmail.com"
+
+## Установка
+    git clone git://github.com/gaech/git-config.git
+    sh git-config/install.sh
