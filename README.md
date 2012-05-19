@@ -1,6 +1,8 @@
 # Базовая конфигурация git
 
 ## Возможности
+ * Автозавершение команд и названий веток по табу
+ * Отображение названия текущей ветки в консоли. gaech@mac:~/Projects/My/git-config[master]
  * Глобальный ignore файл
  * Сокращения для основных команд
   * pull → pl
@@ -18,7 +20,7 @@
 ## Перед запуском
 Создаем симлинк для SublimeText 2
 
-    ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+    sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /bin/subl
 
 Задаем имя и адрес почты в настройках git
 
@@ -27,4 +29,5 @@
 
 ## Установка
     git clone git://github.com/gaech/git-config.git
-    sh git-config/install.sh
+    cd git-config/
+    sh install.sh

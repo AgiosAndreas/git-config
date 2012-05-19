@@ -1,0 +1,25 @@
+
+source ~/.git_completion
+
+
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
+
+function proml {
+  case $TERM in
+    xterm*)
+    TITLEBAR='\[\033]0;\u@\h:\w\007\]'
+    ;;
+    *)
+    TITLEBAR=""
+    ;;
+  esac
+
+PS1="${TITLEBAR}\
+\u@\h:\w\$(parse_git_branch)\
+\$ "
+PS2='> '
+PS4='+ '
+}
+proml
