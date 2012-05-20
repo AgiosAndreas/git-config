@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>git-config by gaech</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>git-config</h1>
+        <p>Моя базовая конфигурация git</p>
+        <p class="view"><a href="https://github.com/gaech/git-config">View the Project on GitHub <small>gaech/git-config</small></a></p>
+        <ul>
+          <li><a href="https://github.com/gaech/git-config/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/gaech/git-config/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/gaech/git-config">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Базовая конфигурация git</h1>
+
+<h2>Возможности</h2>
+
+<ul>
+<li>Автозавершение команд и названий веток по табу<br>
+</li>
+<li>Отображение названия текущей ветки в консоли. 
+<code>
+gaech@mac:~/Projects/My/git-config[master]
+</code> </li>
+<li>Глобальный ignore файл</li>
+<li>Сокращения для основных команд
+
+<ul>
+<li>pull → pl</li>
+<li>ph → ph</li>
+<li>checkout → co</li>
+<li>commit → ci</li>
+<li>status → st</li>
+<li>branch → br</li>
+<li>красивый log → hist</li>
+</ul>
+</li>
+<li>SublimeText - текстовый редактор</li>
+<li>OpenDiff - для сравнения версий файлов</li>
+</ul><h2>Перед запуском</h2>
+
+<p>Создаем симлинк для SublimeText 2</p>
+
+<pre><code>sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /bin/subl
+</code></pre>
+
+<p>Задаем имя и адрес почты в настройках git</p>
+
+<pre><code>git config --global user.name "Andrej Gaevskij"
+git config --global user.email "andrej.gaevskij@gmail.com"
+</code></pre>
+
+<h2>Установка</h2>
+
+<pre><code>git clone git://github.com/gaech/git-config.git
+cd git-config/
+sh install.sh
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/gaech">gaech</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
