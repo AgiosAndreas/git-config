@@ -1,16 +1,21 @@
 #!/bin/bash
 
-email=$(git config --global --get user.email)
-name=$(git config --global --get user.name)
+git config --global alias.pl "pull"
+git config --global alias.ph "push"
+git config --global alias.co "checkout"
+git config --global alias.ci "commit"
+git config --global alias.st "status -s"
+git config --global alias.br "branch"
+git config --global alias.ls 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 
-cp -f gitconfig ~/.gitconfig
+git config --global alias.fs "flow feature start"
+git config --global alias.fl "flow feature"
+git config --global alias.ff "flow feature finish"
+git config --global alias.fp "flow feature publish"
 
-git config --global user.email "$email"
-git config --global user.name "$name"
+git config --global color.ui "auto"
+git config --global core.editor "subl -w"
+git config --global core.ignorecase "false"
 
-cp -f gitignore ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
-
-cp -f gitcompletion ~/.git_completion
-
-cat bashprofile >> ~/.bash_profile
+curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion
+curl https://raw.github.com/gaech/git-config/master/bashprofile > ~/.bash_profile

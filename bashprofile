@@ -1,5 +1,5 @@
 
-source ~/.git_completion
+source ~/.git-completion
 
 
 function parse_git_branch {
